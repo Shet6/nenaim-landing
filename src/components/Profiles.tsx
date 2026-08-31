@@ -9,45 +9,53 @@ const reviews = [
     name: 'Роман',
     meta: 'Преподаватель английского языка',
     src: '/uploads/review-roman-english.mp4',
+    poster: '/uploads/posters/review-roman-english.png',
   },
   {
     name: 'Юра',
     meta: 'Преподаватель математики',
     src: '/uploads/review-yura-math.mp4',
+    poster: '/uploads/posters/review-yura-math.png',
   },
   {
     name: 'Виктор',
     meta: 'Преподаватель математики',
     src: '/uploads/review-viktor-math.mp4',
+    poster: '/uploads/posters/review-viktor-math.png',
   },
   {
     name: 'Сергей',
     meta: 'Преподаватель информатики',
     src: '/uploads/review-sergey-informatics.mp4',
+    poster: '/uploads/posters/review-sergey-informatics.png',
   },
   {
     name: 'Карим',
     meta: 'Преподаватель физики',
     src: '/uploads/review-karim-physics.mp4',
+    poster: '/uploads/posters/review-karim-physics.png',
   },
   {
     name: 'Екатерина',
     meta: 'Преподаватель биологии',
     src: '/uploads/review-ekaterina.mp4',
+    poster: '/uploads/posters/review-ekaterina.png',
   },
   {
     name: 'Сергей',
     meta: 'Преподаватель химии',
     src: '/uploads/review-sergey-mendeleev.mp4',
+    poster: '/uploads/posters/review-sergey-mendeleev.png',
   },
   {
     name: 'Дмитрий',
     meta: 'Преподаватель математики',
     src: '/uploads/review-dmitry-vasiliev.mp4',
+    poster: '/uploads/posters/review-dmitry-vasiliev.png',
   },
 ]
 
-function VideoReview({ src, name }: { src: string; name: string }) {
+function VideoReview({ src, poster, name }: { src: string; poster: string; name: string }) {
   const videoRef = useRef<HTMLVideoElement>(null)
   const animationRef = useRef<number | null>(null)
   const [duration, setDuration] = useState(0)
@@ -99,6 +107,7 @@ function VideoReview({ src, name }: { src: string; name: string }) {
         <video
           ref={videoRef}
           src={src}
+          poster={poster}
           controls
           playsInline
           preload="metadata"
@@ -144,9 +153,9 @@ export default function Profiles() {
 
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4 max-w-5xl mx-auto mb-10">
           {reviews.map((review, index) => (
-            <SectionWrapper key={review.name} delay={index * 100}>
-              <article className="panel p-3 md:p-4 text-center h-full">
-                <VideoReview src={review.src} name={review.name} />
+            <SectionWrapper key={review.src} delay={index * 100}>
+              <article className="p-1 md:p-2 text-center h-full">
+                <VideoReview src={review.src} poster={review.poster} name={review.name} />
                 <h3 className="text-base md:text-lg font-medium text-[#F8F1E7] mt-4">{review.name}</h3>
                 {review.meta && (
                   <p className="text-xs md:text-sm text-[rgba(248,241,231,0.58)] font-light mt-1">{review.meta}</p>
