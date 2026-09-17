@@ -7,6 +7,7 @@ import HeroScreen from '@/components/HeroScreen'
 import Trust from '@/components/Trust'
 import Program from '@/components/Program'
 import TutorTrack from '@/components/TutorTrack'
+import ARTeaching from '@/components/ARTeaching'
 
 import Pricing from '@/components/Pricing'
 import Profiles from '@/components/Profiles'
@@ -40,6 +41,7 @@ export default function Home() {
 
         <TutorTrack />
         <Program />
+        <ARTeaching />
 
         <Who />
         <Pricing />
