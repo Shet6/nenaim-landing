@@ -26,7 +26,22 @@ export default function ARTeaching() {
                 </p>
               </div>
 
-              <div className="mt-8 pt-6 border-t border-[rgba(248,241,231,0.16)]">
+              <dl className="grid grid-cols-3 gap-3 mt-8" aria-label="Материалы и аудитория Александра Романовича">
+                <div className="border-t border-[rgba(248,241,231,0.16)] pt-3">
+                  <dt className="text-2xl md:text-3xl text-[#22D2B8] font-light tracking-tight">100+</dt>
+                  <dd className="mt-1 text-xs sm:text-sm leading-snug font-light text-[rgba(248,241,231,0.58)]">лекций по саморазвитию на YouTube</dd>
+                </div>
+                <div className="border-t border-[rgba(248,241,231,0.16)] pt-3">
+                  <dt className="text-2xl md:text-3xl text-[#22D2B8] font-light tracking-tight">30k</dt>
+                  <dd className="mt-1 text-xs sm:text-sm leading-snug font-light text-[rgba(248,241,231,0.58)]">подписчиков на YouTube</dd>
+                </div>
+                <div className="border-t border-[rgba(248,241,231,0.16)] pt-3">
+                  <dt className="text-2xl md:text-3xl text-[#22D2B8] font-light tracking-tight">7k</dt>
+                  <dd className="mt-1 text-xs sm:text-sm leading-snug font-light text-[rgba(248,241,231,0.58)]">подписчиков в Telegram</dd>
+                </div>
+              </dl>
+
+              <div className="mt-7 pt-6 border-t border-[rgba(248,241,231,0.16)]">
                 <p className="text-lg text-[#F8F1E7] font-light leading-snug">
                   <span className="text-[#22D2B8]">Александр Романович Вотяков</span> - преподаватель и предприниматель, основатель клуба Е, бывший COO Школково. Обучил более 80 000 учеников.
                 </p>
