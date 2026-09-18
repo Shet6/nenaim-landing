@@ -26,24 +26,36 @@ export default function ARTeaching() {
                 </p>
               </div>
 
-              <dl className="grid grid-cols-3 gap-3 mt-8" aria-label="Материалы и аудитория Александра Романовича">
-                <div className="border-t border-[rgba(248,241,231,0.16)] pt-3">
-                  <dt className="text-2xl md:text-3xl text-[#22D2B8] font-light tracking-tight">100+</dt>
-                  <dd className="mt-1 text-xs sm:text-sm leading-snug font-light text-[rgba(248,241,231,0.58)]">лекций по саморазвитию на YouTube</dd>
+              <dl className="grid grid-cols-2 sm:grid-cols-3 gap-3 mt-8" aria-label="Опыт и аудитория Александра Романовича">
+                <div className="min-h-28 p-4 bg-[rgba(34,210,184,0.09)] border border-[rgba(34,210,184,0.35)] flex flex-col justify-between">
+                  <dt className="text-4xl md:text-5xl text-[#22D2B8] font-light tracking-tight">100+</dt>
+                  <dd className="mt-3 text-sm leading-snug font-light text-[rgba(248,241,231,0.72)]">лекций по саморазвитию на YouTube</dd>
                 </div>
-                <div className="border-t border-[rgba(248,241,231,0.16)] pt-3">
-                  <dt className="text-2xl md:text-3xl text-[#22D2B8] font-light tracking-tight">30k</dt>
-                  <dd className="mt-1 text-xs sm:text-sm leading-snug font-light text-[rgba(248,241,231,0.58)]">подписчиков на YouTube</dd>
+                <div className="min-h-28 p-4 bg-[rgba(248,241,231,0.045)] border border-[rgba(248,241,231,0.16)] flex flex-col justify-between">
+                  <dt className="text-4xl md:text-5xl text-[#F8F1E7] font-light tracking-tight">30k</dt>
+                  <dd className="mt-3 text-sm leading-snug font-light text-[rgba(248,241,231,0.72)]">подписчиков на YouTube</dd>
                 </div>
-                <div className="border-t border-[rgba(248,241,231,0.16)] pt-3">
-                  <dt className="text-2xl md:text-3xl text-[#22D2B8] font-light tracking-tight">7k</dt>
-                  <dd className="mt-1 text-xs sm:text-sm leading-snug font-light text-[rgba(248,241,231,0.58)]">подписчиков в Telegram</dd>
+                <div className="min-h-28 p-4 bg-[rgba(248,241,231,0.045)] border border-[rgba(248,241,231,0.16)] flex flex-col justify-between">
+                  <dt className="text-4xl md:text-5xl text-[#F8F1E7] font-light tracking-tight">7k</dt>
+                  <dd className="mt-3 text-sm leading-snug font-light text-[rgba(248,241,231,0.72)]">подписчиков в Telegram</dd>
+                </div>
+                <div className="min-h-28 p-4 bg-[rgba(248,241,231,0.045)] border border-[rgba(248,241,231,0.16)] flex flex-col justify-between">
+                  <dt className="text-3xl md:text-4xl text-[#22D2B8] font-light tracking-tight">80 000+</dt>
+                  <dd className="mt-3 text-sm leading-snug font-light text-[rgba(248,241,231,0.72)]">обученных учеников</dd>
+                </div>
+                <div className="min-h-28 p-4 bg-[rgba(248,241,231,0.045)] border border-[rgba(248,241,231,0.16)] flex flex-col justify-between">
+                  <dt className="text-xl md:text-2xl text-[#F8F1E7] font-light tracking-tight">Клуб Е</dt>
+                  <dd className="mt-3 text-sm leading-snug font-light text-[rgba(248,241,231,0.72)]">основатель</dd>
+                </div>
+                <div className="min-h-28 p-4 bg-[rgba(248,241,231,0.045)] border border-[rgba(248,241,231,0.16)] flex flex-col justify-between">
+                  <dt className="text-xl md:text-2xl text-[#F8F1E7] font-light tracking-tight">Школково</dt>
+                  <dd className="mt-3 text-sm leading-snug font-light text-[rgba(248,241,231,0.72)]">бывший COO</dd>
                 </div>
               </dl>
 
               <div className="mt-7 pt-6 border-t border-[rgba(248,241,231,0.16)]">
                 <p className="text-lg text-[#F8F1E7] font-light leading-snug">
-                  <span className="text-[#22D2B8]">Александр Романович Вотяков</span> - преподаватель и предприниматель, основатель клуба Е, бывший COO Школково. Обучил более 80 000 учеников.
+                  <span className="text-[#22D2B8]">Александр Романович Вотяков</span> - преподаватель и предприниматель.
                 </p>
                 <p className="mt-4 text-base font-light text-[rgba(248,241,231,0.52)] leading-relaxed">
                   Он мой наставник, и его опыт преподавания теперь будет внутри менторства.
