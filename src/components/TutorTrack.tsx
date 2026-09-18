@@ -1,38 +1,14 @@
 import SectionWrapper from '@/components/SectionWrapper'
 
-const stages = [
-  {
-    title: 'Цель и цифры',
-    text: 'Понял, сколько хочу зарабатывать, сколько стоит мой час и какая загрузка мне нужна.',
-  },
-  {
-    title: 'Анкета и позиционирование',
-    text: 'Собрал анкету на Профи.ру и рабочий Telegram. Добавил нормальные фото, регалии, цену и тексты без воды.',
-  },
-  {
-    title: 'Поток заявок',
-    text: 'Настроил поток заявок, написал свои отклики и научился оценивать их эффективность.',
-  },
-  {
-    title: 'Переписка с родителем',
-    text: 'Перестал вести переписку наугад. Умею выяснить запрос и довести подходящего ученика до пробного.',
-  },
-  {
-    title: 'Пробный урок и оплата',
-    text: 'Ученику комфортно на пробном, он понимает мои объяснения и хочет заниматься дальше. Родитель понимает, как я помогу, и оплачивает занятия.',
-  },
-  {
-    title: 'Система занятий',
-    text: 'Занятия собраны в систему. Есть план, домашка, контроль прогресса и обратная связь родителю.',
-  },
-  {
-    title: 'Чек и новые форматы',
-    text: 'Поднял цену и добавил форматы, которые не упираются в количество часов: группы, параллельные занятия и интенсивы.',
-  },
-  {
-    title: 'Делегирование',
-    text: 'Вынес учеников и цифры в CRM, передал рутину ассистенту. Больше не держу всё в голове.',
-  },
+const results = [
+  'Поставишь цель',
+  'Упакуешь анкету и отклики на Профи.ру',
+  'Настроишь поток заявок от учеников',
+  'Научишься правильно переписываться с родителями',
+  'Будешь проводить пробные уроки, после которых покупают',
+  'Построишь программу обучения, чтобы эффективно преподавать',
+  'Масштабируешься от индивидуальных к групповым и параллельным занятиям',
+  'Научишься делегировать задачи и начнёшь работать с ассистентом',
 ]
 
 export default function TutorTrack() {
@@ -41,27 +17,30 @@ export default function TutorTrack() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionWrapper>
           <h2 className="text-4xl md:text-6xl font-light text-[#F8F1E7] text-center tracking-[-0.04em] mb-8 md:mb-10">
-            Трек репетитора
+            Чего ты достигнешь
           </h2>
         </SectionWrapper>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4">
-          {stages.map((stage, index) => (
-            <SectionWrapper key={stage.title} delay={index * 50}>
-              <article className="h-full min-h-[220px] p-5 md:p-6 border border-[rgba(248,241,231,0.16)] bg-[rgba(14,23,30,0.88)] transition-all duration-200 hover:-translate-y-1 hover:border-[rgba(34,210,184,0.55)] hover:bg-[rgba(20,39,45,0.98)]">
-                <span className="text-sm font-medium tracking-[0.12em] text-[#22D2B8]">
-                  {String(index + 1).padStart(2, '0')}
-                </span>
-                <h3 className="mt-7 text-xl md:text-2xl font-normal tracking-tight text-[#F8F1E7] leading-tight">
-                  {stage.title}
-                </h3>
-                <p className="mt-3 text-sm font-light leading-relaxed text-[rgba(248,241,231,0.6)]">
-                  {stage.text}
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-3">
+          {results.map((result, index) => (
+            <SectionWrapper key={result} delay={index * 45}>
+              <div className="h-full flex items-center gap-4 px-5 py-4 md:px-6 md:py-5 border border-[rgba(248,241,231,0.16)] bg-[rgba(14,23,30,0.64)] transition-colors duration-200 hover:border-[rgba(34,210,184,0.52)] hover:bg-[rgba(20,39,45,0.8)]">
+                <span className="shrink-0 w-2 h-2 rounded-full bg-[#22D2B8]" aria-hidden="true" />
+                <p className="text-lg md:text-xl font-light leading-snug tracking-tight text-[#F8F1E7]">
+                  {result}
                 </p>
-              </article>
+              </div>
             </SectionWrapper>
           ))}
         </div>
+
+        <SectionWrapper delay={380}>
+          <div className="max-w-6xl mx-auto mt-3 px-5 py-6 md:px-7 md:py-7 border border-[rgba(34,210,184,0.48)] bg-[rgba(34,210,184,0.08)] text-center">
+            <p className="text-2xl md:text-3xl font-light tracking-tight text-[#F8F1E7] text-balance">
+              Начнешь зарабатывать <span className="text-[#22D2B8]">100-300к</span> на репетиторстве
+            </p>
+          </div>
+        </SectionWrapper>
 
       </div>
     </section>

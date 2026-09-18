@@ -8,7 +8,7 @@ const navLinks = [
   { label: 'Обо мне', href: '#trust' },
   { label: 'Результаты', href: '#profiles' },
   { label: 'Программа', href: '#program' },
-  { label: 'Тарифы', href: '#pricing' },
+  { label: 'Участие', href: '#pricing' },
 ]
 
 export default function Header() {

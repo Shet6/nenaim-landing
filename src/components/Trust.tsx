@@ -5,6 +5,41 @@ import { ChevronDown, MessageCircle, X } from 'lucide-react'
 import SectionWrapper from '@/components/SectionWrapper'
 import { breakAnd } from '@/lib/utils'
 
+function LazyAutoplayVideo({ src, className }: { src: string; className: string }) {
+  const ref = useRef<HTMLVideoElement>(null)
+  const [shouldLoad, setShouldLoad] = useState(false)
+
+  useEffect(() => {
+    const video = ref.current
+    if (!video) return
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting) return
+        setShouldLoad(true)
+        observer.disconnect()
+      },
+      { rootMargin: '300px 0px' }
+    )
+
+    observer.observe(video)
+    return () => observer.disconnect()
+  }, [])
+
+  return (
+    <video
+      ref={ref}
+      src={shouldLoad ? src : undefined}
+      className={className}
+      autoPlay={shouldLoad}
+      preload="none"
+      muted
+      loop
+      playsInline
+    />
+  )
+}
+
 function processText(text: string) {
   const parts = text.split(/(\d[\dк+–\-]*)/g)
   return parts.map((part, i) => {
@@ -62,7 +97,7 @@ export default function Trust() {
         <SectionWrapper>
           <div className="text-center mb-8">
             <h2 className="text-4xl md:text-5xl font-light text-[#F8F1E7] tracking-tight leading-tight">
-              Мне это не нравится или почему я стал репетитором
+              «Мне это не нравится», или почему я стал репетитором
             </h2>
           </div>
         </SectionWrapper>
@@ -73,8 +108,10 @@ export default function Trust() {
             <div className="w-1/2 sm:w-1/2 max-w-[160px] sm:max-w-[220px] mx-auto sm:mx-0">
               <div className="aspect-[3/4] border border-[rgba(248,241,231,0.16)] bg-[rgba(248,241,231,0.045)] overflow-hidden">
                 <img
-                  src="/uploads/24bc1781-DSC_1_0152.JPG"
+                  src="/uploads/trust-artem-1.jpg"
                   alt="Артем Максимович"
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover"
                   onError={(e) => { const i = e.target as HTMLImageElement; i.onerror = null; i.src = 'https://placehold.co/400x533/f5f5f0/78716c?text=АМ' }}
                 />
@@ -83,8 +120,10 @@ export default function Trust() {
             <div className="w-1/2 sm:w-1/2 max-w-[160px] sm:max-w-[220px] mx-auto sm:mx-0">
               <div className="aspect-[3/4] border border-[rgba(248,241,231,0.16)] bg-[rgba(248,241,231,0.045)] overflow-hidden">
                 <img
-                  src="/uploads/ce7e9791-telegram-cloud-photo-size-2-5271920447601709542-y.jpg"
+                  src="/uploads/trust-artem-2.jpg"
                   alt="Артем Максимович"
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover"
                   onError={(e) => { const i = e.target as HTMLImageElement; i.onerror = null; i.src = 'https://placehold.co/400x533/f5f5f0/78716c?text=АМ' }}
                 />
@@ -149,7 +188,8 @@ export default function Trust() {
             </div>
 
             {/* What tutoring gave me — carousel */}
-            <div className={`mt-12 md:mt-16 ${expanded ? 'block' : 'hidden'}`}>
+            {expanded && (
+            <div className="mt-12 md:mt-16">
               <SectionWrapper>
                 <div className="text-center mb-8">
                   <h3 className="text-3xl md:text-4xl font-light text-[#F8F1E7] tracking-tight leading-tight">
@@ -183,13 +223,9 @@ export default function Trust() {
                         <div className="aspect-[3/4] relative">
                           {'video' in item ? (
                             <div className="w-full h-full relative cursor-pointer" onClick={() => setActiveVideo(item.video!)}>
-                              <video
-                                src={item.video}
+                              <LazyAutoplayVideo
+                                src={item.video!}
                                 className="w-full h-full object-cover"
-                                autoPlay
-                                muted
-                                loop
-                                playsInline
                               />
                               <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                                 <div className="w-14 h-14 rounded-full bg-[#071316]/70 backdrop-blur-sm flex items-center justify-center border border-[rgba(248,241,231,0.2)]">
@@ -201,6 +237,8 @@ export default function Trust() {
                             <img
                               src={item.img}
                               alt=""
+                              loading="lazy"
+                              decoding="async"
                               className="w-full h-full object-cover"
                               onError={(e) => { const el = e.target as HTMLImageElement; el.onerror = null; el.src = 'https://placehold.co/400x533/f5f5f0/78716c?text=Фото' }}
                             />
@@ -266,6 +304,7 @@ export default function Trust() {
                 </div>
               </div>
             </div>
+            )}
         </div>
       </div>
 

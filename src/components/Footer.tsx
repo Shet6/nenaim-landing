@@ -17,7 +17,7 @@ export default function Footer() {
               Программа
             </a>
             <a href="#pricing" className="hover:text-[#F8F1E7] transition-colors">
-              Тарифы
+              Участие
             </a>
           </div>
 

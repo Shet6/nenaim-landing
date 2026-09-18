@@ -35,13 +35,6 @@ export default function Program() {
               </SectionWrapper>
             ))}
           </div>
-
-          <div className="panel max-w-5xl mx-auto mt-3 p-6 md:p-8">
-            <h3 className="m-0 text-lg font-medium tracking-tight text-[#22D2B8]">Идеальный результат</h3>
-            <p className="mt-2 max-w-4xl text-base font-light leading-relaxed text-[#F8F1E7]">
-              Вы зарабатываете 150-300к в месяц, ведёте уроки не больше 15 часов в неделю, учётом и поиском учеников занимается ассистент
-            </p>
-          </div>
         </SectionWrapper>
 
       </div>
