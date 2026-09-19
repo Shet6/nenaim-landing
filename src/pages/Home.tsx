@@ -19,12 +19,26 @@ import FormModal from '@/components/FormModal'
 export default function Home() {
   const [isFormOpen, setIsFormOpen] = useState(false)
 
+  const trackGoal = (goal: 'telegram_click' | 'pricing_open') => {
+    const metrikaWindow = window as Window & {
+      ym?: (counterId: number, method: 'reachGoal', goalName: string) => void
+    }
+
+    metrikaWindow.ym?.(112814194, 'reachGoal', goal)
+  }
+
   // Handle hash links for form modal
   const handleAnchorClick = (e: React.MouseEvent<HTMLDivElement>) => {
     const target = e.target as HTMLElement
     const anchor = target.closest('a')
+
+    if (anchor?.href.includes('t.me/m/HWQoz_r9Y2Ey')) {
+      trackGoal('telegram_click')
+    }
+
     if (anchor && anchor.getAttribute('href') === '#form') {
       e.preventDefault()
+      trackGoal('pricing_open')
       setIsFormOpen(true)
     }
   }

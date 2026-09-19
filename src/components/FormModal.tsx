@@ -59,7 +59,7 @@ export default function FormModal({ isOpen, onClose }: FormModalProps) {
             </p>
 
             <a
-              href="https://t.me/shetartm"
+              href="https://t.me/m/HWQoz_r9Y2Ey"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 w-full h-12 text-sm font-medium bg-[#22D2B8] text-[#071316] hover:bg-[#22D2B8]/90 transition-colors tracking-wide"

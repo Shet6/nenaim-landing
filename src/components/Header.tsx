@@ -52,7 +52,7 @@ export default function Header() {
               </a>
             ))}
             <a
-              href="https://t.me/shetartm"
+              href="https://t.me/m/HWQoz_r9Y2Ey"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#22D2B8] text-[#071316] text-sm font-medium hover:bg-[#22D2B8]/90 transition-colors tracking-wide"
@@ -91,7 +91,7 @@ export default function Header() {
             </a>
           ))}
           <a
-            href="https://t.me/shetartm"
+            href="https://t.me/m/HWQoz_r9Y2Ey"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-[#22D2B8] text-[#071316] text-sm font-medium hover:bg-[#22D2B8]/90 transition-colors tracking-wide mt-2"

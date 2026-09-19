@@ -29,7 +29,7 @@ export default function FinalCTA() {
             </p>
 
             <a
-              href="https://t.me/shetartm"
+              href="https://t.me/m/HWQoz_r9Y2Ey"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-8 py-4 bg-[#22D2B8] text-[#071316] font-medium text-base hover:bg-[#22D2B8]/90 transition-colors tracking-wide"
